@@ -1,0 +1,166 @@
+body {
+    background-color: #EEE;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-div {
+    width: 80%;
+    margin: auto;
+    max-width: 1050px;
+}
+
+/******************
+Grid layout
+******************/
+
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 160px;
+  height: 120px;
+  float: left;
+  background: #CCC;
+  border: 2px solid #333;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+
+/******************
+
+******************/
+
+.about_pic {
+    width: 185px;
+    max-width: 100%;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+nav {
+    background-color: rgb(129, 67, 37);
+}
+
+
+
+
+
+
+/******************
+Gallery STyles
+******************/
+
+.gallery {
+    padding-top: 3rem;
+}
+
+.gallery img {
+
+    width: 30%;
+}
+
+.carousel {
+    width: 660px;
+    margin: auto;
+}
+
+#thumbnails {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+
+#thumbnails img {
+    width: 225px;
+    align-self: center;
+    padding: 15px 0;
+    border-radius: 15%;
+
+}
+
+#thumbs_1,
+#thumbs_2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+
+
+.gallery_button { border: none;
+   display: inline-block;
+   outline: 0;
+   padding: 8px 16px;
+   vertical-align: middle;
+   overflow: hidden;
+   text-decoration: none;
+   color: inherit;
+   background-color: inherit;
+   text-align: center;
+   cursor: pointer;
+   white-space: nowrap;
+   font-size: 2em;
+}
+
+.gallery_button:hover {
+    background-color: #BBB;
+    color: #EEE;
+}
+
+
+.left_button {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%)
+}
+
+.right_button {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%)
+}
+.w3-animate-opacity {
+    animation: opac 0.8s
+}
