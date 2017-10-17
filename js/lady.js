@@ -1,64 +1,66 @@
 "use strict"
 
-const images = ["img/1.jpg",
-                "img/2.jpg",
-                "img/3.jpg",
-                "img/4.jpg",
-                "img/5.jpg",
-                "img/6.jpg",
-                "img/7.jpg",
-                "img/8.jpg",
-                "img/9.jpg",
-                "img/10.jpg",
-                "img/11.jpg",
-                "img/12.jpg",
-                "img/13.jpg",
-                "img/14.jpg",
-                "img/15.jpg",
-                "img/16.jpg",
-                "img/17.jpg",
-                "img/18.jpg",
+const images = ["img/1.JPG",
+                "img/2.JPG",
+                "img/3.JPG",
+                //"img/4.JPG",
+                "img/5.JPG",
+                "img/6.JPG",
+                "img/7.JPG",
+                "img/8.JPG",
+                "img/9.JPG",
+                "img/10.JPG",
+                "img/11.JPG",
+                "img/12.JPG",
+                "img/13.JPG",
+                "img/14.JPG"
 ]
 
-let imageIndex = 0;
-const thumbs_1 = document.querySelector('#thumbs_1');
-const thumbs_2 = document.querySelector('#thumbs_2');
+let firstDisplayedImage = 0;
+const thumbsLg = document.querySelector('#thumbs_lg');
+const smallThumbs = document.querySelector('#thumbs_small')
+const medThumbs = document.querySelector('#thumbs_med')
 
-const circulatePhotoIndex = () => {
+const circulatePhotoIndex = (imageIndex) => {
     if (imageIndex < 0) {
         imageIndex = images.length + imageIndex;
     } else if (imageIndex >= images.length) {
-        imageIndex = imageIndex % 6;
+        imageIndex = imageIndex % images.length;
     }
-    console.log(imageIndex);
+    return imageIndex;
+
 };
 
-const advancePhotos = (direction) => {
-    if (direction === "back") {imageIndex -= 12};
-    let htmlCode = '';
-    for (let i = 0; i <3; i++) {
-        circulatePhotoIndex();
-        htmlCode += `<img src="${images[imageIndex++]}" alt="">`;
-    }
-    thumbs_1.innerHTML = htmlCode;
-
-    htmlCode = '';
-    for (let i = 0; i <3; i++) {
-        circulatePhotoIndex();
-        htmlCode += `<img src="${images[imageIndex++]}" alt="">`;
-    }
-    thumbs_2.innerHTML = htmlCode;
+const advancePhotos = (direction, num) => {
+    //Move firstDisplayedImage index forward or back
+    if (direction === "back") {
+        firstDisplayedImage = circulatePhotoIndex(firstDisplayedImage - (num));
+    } else if (direction === 'forward') firstDisplayedImage = circulatePhotoIndex(firstDisplayedImage + num);
+    //Push updated photos to thumbnail gallery divs
+    advanceLargePhotos();
+    advanceMedPhotos();
+    advanceSmallPhotos();
 }
 
-const backtrackPhotos = () => {
-    thumbs_1.innerHTML = `<img src="${images[imageIndex - 6 ]}" alt="">
-<img src="${images[imageIndex - 5]}" alt="">
-<img src="${images[imageIndex - 4]}" alt="">`;
+const advanceLargePhotos = direction => {
+    let htmlCode = '';
+    for (let i = 0; i < 3; i++) {
+        htmlCode += `<img src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}" alt="">`;
+    }
+    thumbsLg.innerHTML = htmlCode;
+}
 
-    thumbs_2.innerHTML = `<img src="${images[imageIndex - 3]}" alt="">
-<img src="${images[imageIndex - 2]}" alt="">
-<img src="${images[imageIndex - 1]}" alt="">`;
-imageIndex -= 6;
+const advanceMedPhotos = direction => {
+    let htmlCode = '';
+    for (let i = 0; i < 2; i++) {
+        htmlCode += `<img src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}" alt="">`;
+    }
+    medThumbs.innerHTML = htmlCode;
+}
+
+const advanceSmallPhotos = direction => {
+    smallThumbs.innerHTML = `<img src="${images[circulatePhotoIndex(firstDisplayedImage)]}" alt="">`;
 }
 
 advancePhotos();
+$('body').scrollspy({ target: '#main-nav', offset:200 });
