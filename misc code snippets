@@ -1,0 +1,128 @@
+<div class="row info clearfix">
+    <div class="float-left col-md-4 clearfix">
+        <h3>Information</h3>
+        <p>
+            555 Bite It Lane, Suite 123 <br />
+            Louisville, Kentucky 40206<br />
+            (502) I-BAD-DOG<br />
+            / <a href="mailto:lady@ladyjaney.com" class="link">lady@ladyjaney.com</a>
+        </p>
+    </div>
+    <div class="float-right col-md-5">
+        <a href="" class="button">Facebook</a>
+        <a href="" class="button">Twitter</a>
+        <a href="" class="button">Instagram</a>
+        <a href="" class="button">LinkedIn</a>
+    </div>
+</div><!--/.row .info-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row form">
+    <div class="col-12">
+    <h3>Contact form</h3>
+    <form method="post" action="/contact">
+        <div class="input">
+            <input type="text" name="first_name" placeholder="First name *" />
+        </div>
+        <div class="input">
+            <input type="text" name="last_name" placeholder="Last name *" />
+        </div>
+        <div class="input">
+            <input type="text" name="phone_number" placeholder="Phone number (if you want Lady to call you and bark!)" />
+        </div>
+        <div class="input">
+            <input type="text" name="email" placeholder="Email address *" />
+        </div>
+        <div class="input subject">
+            <input type="text" name="subject" id="subject" placeholder="Subject *" />
+        </div>
+        <div class="input message">
+            <textarea name="message" placeholder="Your question *"></textarea>
+        </div>
+        <div class="ok">
+            Sent! Thanks!
+        </div>
+        <div class="submitAndMessage">
+            <button class="button">Send your message</button>
+            <div class="errorMessage">
+                <span class="notEmpty">All fields are required</span>
+                <span class="email">E-mail is invalid</span>
+            </div>
+        </div>
+    </form>
+</div><!--/.row .form-->
+        <!-- <script type="text/javascript">
+            window.formValidatorData = {"rules":{"notEmpty":["^.+$","mgi"],"email":["^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$","gi"],"url":["^((https?|ftp|gopher|telnet|file|notes|ms-help):((\/\/)|(\\\\))+[\\w\\d:#@%\/;$()~_?\\+-=\\\\.&]*)$","gi"],"alphaNumeric":["[a-zA-Z0-9_\\-]+$","gi"],"numeric":["^([0-9]+|)$","gi"]},"validations":[{"field":"firstname","rule":"notEmpty","errorMessage":"notEmpty"},{"field":"lastname","rule":"notEmpty","errorMessage":"notEmpty"},{"field":"email","rule":"notEmpty","errorMessage":"notEmpty"},{"field":"subject","rule":"notEmpty","errorMessage":"notEmpty"},{"field":"message","rule":"notEmpty","errorMessage":"notEmpty"},{"field":"email","rule":"email","errorMessage":"email"}]};
+        </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------other site  http://crafton.eu/contact---------------->
+    <!-- <div class="menuContact__items">
+        <div class="contactItems">
+            <div class="contactItems__item">
+                <img class="contactItems__ico" src="img/ico_addr.png" alt="">
+                <span class="contactItems__txt">14/5 Wozna Street<br /> 61-777 Poznań, Poland</span>
+            </div>
+            <div class="contactItems__item">
+                <img class="contactItems__ico" src="img/ico_mail.png" alt="">
+                <span class="contactItems__txt"><a class="contactItems__link contactItems__link--menu" href="mailto:hello@crafton.eu">hello@crafton.eu</a></span>
+            </div>
+            <div class="contactItems__item">
+                <img class="contactItems__ico" src="img/ico_mob.png" alt="">
+                <span class="contactItems__txt">TEL.: +48 61 624 86 92</span>
+            </div>
+            <div class="contactItems__item">
+                <img class="contactItems__ico" src="img/ico_fax.png" alt="">
+                <span class="contactItems__txt">FAX: +48 61 624 28 45</span>
+            </div>
+        </div>
+    </div> -->
+
+</div> <!--/.row-->
+</div><!--/.container #content-div-->

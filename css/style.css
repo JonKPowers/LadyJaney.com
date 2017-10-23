@@ -1,5 +1,9 @@
 body {
     background: linear-gradient(85deg, #FFF, #EEE, #F7F7F7, #EEE, #FFF, #EEE, #F7F7F7, #EEE, #FFF);
+    background-image: url('../img/paw_print.png');
+    background-size: 125px 125px;
+    background-repeat: repeat;
+    background-attachment: fixed;
     text-align: center;
     padding-top: 5rem;
 }
@@ -17,7 +21,8 @@ a {
     text-decoration: none;
 }
 
-.content-div {
+#content-div {
+
     position: relative;
     width: 80%;
     margin: auto;
@@ -36,7 +41,8 @@ a {
 }
 
 nav {
-    background-color: rgb(129, 67, 37);
+    background-color: rgb(103, 54, 30);
+    /*Was rgb(129, 67, 37)*/
 }
 
 /******************
@@ -122,7 +128,6 @@ Gallery Styles
 
 .social li {
 	background-color: #B5B5B5;
-	border: 2px solid #B5B5B5;
 	border-radius: 50%;
 	float: left;
 	height: 36px;
@@ -136,7 +141,6 @@ Gallery Styles
 }
 .social li:hover {
 	transform: scale(1.15) rotate(360deg);
-    border: 2px solid #2c3e50;
     background: #2c3e50;
 }
 
@@ -171,157 +175,157 @@ Gallery Styles
 Contact us div styles
 *************************************************/
 
-/*.container {
-    padding-left: 7%;
-    padding-right: 7%;
-    padding-bottom: 100px;
-    max-width: 590px;
-}*/
+/*Contact info section styles*/
+#info p {
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#info p a {
+    text-decoration: none;
+}
+
+#info p a:hover {
+    text-decoration: underline;
+}
+
+/*Contact info buttons styles*/
+
+#info a.button {
+    line-height: 39px;
+    display: inline-block;
+    width: 85%;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: rgba(103, 54, 30, 0.7) /*was #cabfbf*/;
+    border: 2px solid #e1d1d1;
+    text-align: center;
+    cursor: pointer;
+}
+
+#info .button {
+    margin-top: 4px;
+    line-height: normal;
+    padding: 8px 0 6px 0;
+}
+
+#info .button:first-child {
+    margin-top: 0;
+}
+
+/*Contact form styles*/
+
+#contact-form form {
+    margin-top: 10px;
+    overflow: hidden;
+    display: block;
+    overflow: hidden;
+    margin-left: -2%;
+}
+
+#contact-form .input {
+    width: 48%;
+    margin-left: 2%;
+    float: left;
+    margin-bottom: 13px;
+}
+
+#contact-form .subject,
+#contact-form .message {
+    width: 98%
+}
+
+#contact-form form button.button,
+ {
+    margin-left: 2%;
+    width: auto;
+    padding: 0 60px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #c4b9b9;
+    background-image: linear-gradient(to bottom,#c4b9b9,#9f9694);
+}
+
+#contact-form .input input,
+#contact-form .input textarea {
+    padding: 10px 15px;
+    font-size: 0.8em;
+    background: transparent;
+    border: 2px solid #e1d1d1;
+    width: 100%;
+    transition: all 200ms ease-out;
+}
+
+#contact-form form button.button,
+#contact- {
+    margin-left: 2%;
+    width: auto;
+    padding: 0 60px;
+    font-family: 'din-condensed-web';
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #c4b9b9;
+    background-image: linear-gradient(to bottom,#c4b9b9,#9f9694);
+}
+
+/*Form validation styles*/
+#contact-form .input input:focus,
+#contact-form .input textarea:focus {
+    outline: 1.5px solid brown;
+    outline-style: inset;
+}
+
+#content #contactIndex .form .input input.error,
+#content #contactIndex .form .input textarea.error {
+    border: 2px solid #d64e43;
+}
+
+#contact-form form .ok {
+    margin-left: 2%;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 41px;
+    font-style: italic;
+    display: none;
+}
 
 
-    #info p {
-        font-size: 1.4rem;
-        font-weight: normal;
-        font-style: normal;
-    }
 
-    #info p a {
-        text-decoration: none;
-    }
+#contact-form  form .errorMessage {
+    display: inline-block;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: 20px;
+    color: #d64e43;
+    line-height: 41px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
 
-    #info p a:hover {
-        text-decoration: underline;
-    }
+#contact-form form .errorMessage span {
+    display: none;
+}
 
-    #contact-form form .input {
-        width: 48%;
-        margin-left: 2%;
-        float: left;
-        margin-bottom: 13px;
-    }
+#contact-form form .errorMessage.display {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
 
-    #content #contactIndex .button,#content #contactIndex a.button {
-        line-height: 39px;
-        display: inline-block;
-        width: 100%;
-        text-transform: uppercase;
-        font-weight: normal;
-        font-size: 18px;
-        color: #FFFFFF;
-        text-decoration: none;
-        background: #cabfbf;
-        border: 2px solid #e1d1d1;
-        text-align: center;
-        cursor: pointer;
-    }
+/*****************************************************
 
-    #content #contactIndex .info .right .button {
-        margin-top: 4px;
-        line-height: normal;
-        padding: 8px 0 6px 0;
-    }
+Media Queries for responsive image gallery swap-outs
 
-    #content #contactIndex .info .right .button:first-child {
-        margin-top: 0;
-    }
-
-    #content #contactIndex .form button.button {
-        margin-left: 2%;
-        width: auto;
-        padding: 0 60px;
-        font-family: 'din-condensed-web';
-        font-size: 18px;
-        font-weight: 400;
-        background-color: #c4b9b9;
-        background-image: -webkit-gradient(linear,left top,left bottom,from(#c4b9b9),to(#9f9694));
-        background-image: -webkit-linear-gradient(top,#c4b9b9,#9f9694);
-        background-image: -moz-linear-gradient(top,#c4b9b9,#9f9694);
-        background-image: -o-linear-gradient(top,#c4b9b9,#9f9694);
-        background-image: linear-gradient(to bottom,#c4b9b9,#9f9694);
-    }
-
-    #content #contactIndex .form {
-        margin-top: 10px;
-        overflow: hidden;
-    }
-
-    #content #contactIndex .form form {
-        display: block;
-        overflow: hidden;
-        margin-left: -2%;
-    }
-
-
-
-    #content #contactIndex .form .input input,#content #contactIndex .form .input textarea {
-        padding: 10px 15px;
-        font-family: 'din-condensed-web';
-        font-size: 20px;
-        font-weight: 400;
-        text-transform: uppercase;
-        background: transparent;
-        border: 2px solid #e1d1d1;
-        width: 100%;
-        color: #FFFFFF;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        transition: all 200ms ease-out;
-    }
-
-    #content #contactIndex .form .input input.error,#content #contactIndex .form .input textarea.error {
-        border: 2px solid #d64e43;
-    }
-
-    #content #contactIndex .form .input.subject,#content #contactIndex .form .input.message {
-        width: 98%;
-    }
-
-    #content #contactIndex .form .ok {
-        margin-left: 2%;
-        text-transform: uppercase;
-        font-size: 20px;
-        line-height: 41px;
-        font-style: italic;
-        display: none;
-    }
-
-    #content #contactIndex .form button.button {
-        margin-left: 2%;
-        width: auto;
-        padding: 0 60px;
-        font-family: 'din-condensed-web';
-        font-size: 18px;
-        font-weight: 400;
-        background-color: #c4b9b9;
-        background-image: linear-gradient(to bottom,#c4b9b9,#9f9694);
-    }
-
-    #content #contactIndex .form .errorMessage {
-        display: inline-block;
-        font-style: italic;
-        text-transform: uppercase;
-        font-size: 15px;
-        margin-left: 20px;
-        color: #d64e43;
-        line-height: 41px;
-        opacity: 0;
-        filter: alpha(opacity=0);
-        -webkit-transition: all 200ms ease-out;
-        -moz-transition: all 200ms ease-out;
-        -ms-transition: all 200ms ease-out;
-        -o-transition: all 200ms ease-out;
-        transition: all 200ms ease-out;
-    }
-
-    #content #contactIndex .form .errorMessage span {
-        display: none;
-    }
-
-    #content #contactIndex .form .errorMessage.display {
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
+******************************************************/
 
 @media (min-width: 760px) and (max-width: 1060px) {
     #gallery_med {

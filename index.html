@@ -83,8 +83,8 @@
                 <h1>Bark at Lady!</h1>
                 <h4>(she'll bark back)</h4>
             </div>
-            <div class="py-5 clearfix">
-                <div class="float-left col-md-5" id="info">
+            <div class="py-5 clearfix" id="info">
+                <div class="float-left col-lg-6">
                     <h3>Contact Info</h3>
                     <p class="pt-3">
                         555 Bite First, Ask Later Lane, Suite 123 <br />
@@ -93,40 +93,47 @@
                         / <a href="mailto:lady@ladyjaney.com" class="link">lady@ladyjaney.com</a>
                     </p>
                 </div> <!-- /.float-left-->
-                <div class="float-right col-md-5" id="contact-form">
-                    <h3>Contact form</h3>
-                    <form method="post" action="/contact">
-                        <div class="input">
-                            <input type="text" name="first_name" placeholder="First name *" />
-                        </div>
-                        <div class="input">
-                            <input type="text" name="last_name" placeholder="Last name *" />
-                        </div>
-                        <div class="input">
-                            <input type="text" name="phone_number" placeholder="Phone number (if you want Lady to call you and bark!)" />
-                        </div>
-                        <div class="input">
-                            <input type="text" name="email" placeholder="Email address *" />
-                        </div>
-                        <div class="input subject">
-                            <input type="text" name="subject" id="subject" placeholder="Subject *" />
-                        </div>
-                        <div class="input message">
-                            <textarea name="message" placeholder="Your question *"></textarea>
-                        </div>
-                        <!-- <div class="ok">
-                            Sent! Thanks!
-                        </div>
-                        <div class="submitAndMessage">
-                            <button class="button">Send your message</button>
-                            <div class="errorMessage">
-                                <span class="notEmpty">All fields are required</span>
-                                <span class="email">E-mail is invalid</span>
-                            </div>
-                        </div> -->
-                    </form>
-                </div> <!-- /.float-right-->
+                <div class="float-right col-lg-6 d-none d-lg-block">
+                    <a href="#contact" class="button">Find out how to meet Lady</a>
+                    <a href="#contact" class="button">Book Lady for a special event</a>
+                    <a href="#contact" class="button">Learn more about Lady</a>
+                    <a href="#contact" class="button">Need more Lady?</a>
+                </div>
             </div> <!--/.clearfix-->
+            <div id="contact-form" class="mb-5">
+                <h3>Contact form</h3>
+                <form method="post" action="/contact">
+                    <div class="input">
+                        <input type="text" name="first_name" placeholder="First name *" />
+                    </div>
+                    <div class="input">
+                        <input type="text" name="last_name" placeholder="Last name *" />
+                    </div>
+                    <div class="input">
+                        <input type="text" name="phone_number" placeholder="Phone number (if you want Lady to call you and bark!)" />
+                    </div>
+                    <div class="input">
+                        <input type="text" name="email" placeholder="Email address *" />
+                    </div>
+                    <div class="input subject">
+                        <input type="text" name="subject" id="subject" placeholder="Subject *" />
+                    </div>
+                    <div class="input message">
+                        <textarea name="message" placeholder="Your question *"></textarea>
+                    </div>
+                    <div class="ok">
+                        Sent! Thanks!
+                    </div>
+                    <div class="submitAndMessage">
+                        <button class="button">Send your message</button>
+                        <div class="errorMessage">
+                            <span class="notEmpty">All fields are required</span>
+                            <span class="email">E-mail is invalid</span>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- /#contact-form-->
+
              <!--/#contact-->
 
 
