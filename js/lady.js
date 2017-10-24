@@ -1,5 +1,9 @@
 "use strict"
 
+///////////////////////////////////////////////
+//Photo Carousel
+///////////////////////////////////////////////
+
 const images = ["img/1.JPG",
                 "img/2.JPG",
                 "img/3.JPG",
@@ -36,31 +40,63 @@ const advancePhotos = (direction, num) => {
     if (direction === "back") {
         firstDisplayedImage = circulatePhotoIndex(firstDisplayedImage - (num));
     } else if (direction === 'forward') firstDisplayedImage = circulatePhotoIndex(firstDisplayedImage + num);
-    //Push updated photos to thumbnail gallery divs
-    advanceLargePhotos();
-    advanceMedPhotos();
-    advanceSmallPhotos();
-}
 
-const advanceLargePhotos = direction => {
+    //Push updated photos to thumbnail gallery divs
+    //Large photo div
     let htmlCode = '';
     for (let i = 0; i < 3; i++) {
-        htmlCode += `<img src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}" alt="">`;
+        htmlCode += `<img class="lightitup" src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}" alt="">`;
     }
     thumbsLg.innerHTML = htmlCode;
-}
 
-const advanceMedPhotos = direction => {
-    let htmlCode = '';
+    //Med photo div
+    htmlCode = '';
     for (let i = 0; i < 2; i++) {
-        htmlCode += `<img src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}" alt="">`;
+        htmlCode += `<img class="lightitup" src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}" alt="">`;
     }
     medThumbs.innerHTML = htmlCode;
-}
 
-const advanceSmallPhotos = direction => {
-    smallThumbs.innerHTML = `<img src="${images[circulatePhotoIndex(firstDisplayedImage)]}" alt="">`;
+    //Small photo div
+    smallThumbs.innerHTML = `<img class="lightitup" src="${images[circulatePhotoIndex(firstDisplayedImage)]}" alt="">`;
 }
 
 advancePhotos();
 $('body').scrollspy({ target: '#main-nav', offset:200 });
+
+///////////////////////////////////////////////
+//lightbox
+///////////////////////////////////////////////
+$(document).ready(function() {
+    //Lightbox Gallary feature
+    var $lightbox = $("<div class='lightbox'></div>");
+    console.log($lightbox);
+    var $img = $("<img>");
+
+    // Hide the lightbox
+    $lightbox.hide();
+
+    // Add image and caption to lightbox
+    $lightbox.append($img)
+
+    // Add lighbox to document
+    $('body').append($lightbox);
+
+    //Listener for gallery images
+    $('.lightitup').click(function(e) {
+      e.preventDefault();
+
+    // Get image link and description
+      var src = $(this).attr("src");
+
+    // Add data to lighbox
+      $img.attr('src', src);
+
+    // Show lightbox
+      $lightbox.fadeIn('fast');
+
+    // Exit the lightbox when the div is clicked anywhere
+      $lightbox.click(function() {
+        $lightbox.fadeOut('fast');
+      });
+    });
+});
