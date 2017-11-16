@@ -1,4 +1,4 @@
-"use strict"
+
 
 ///////////////////////////////////////////////
 //Photo Carousel
@@ -35,7 +35,7 @@ const thumbsLg = document.querySelector('#thumbs_lg');
 const smallThumbs = document.querySelector('#thumbs_small')
 const medThumbs = document.querySelector('#thumbs_med')
 
-const circulatePhotoIndex = (imageIndex) => {
+const circulatePhotoIndex = function(imageIndex) {
     //This function keeps the image index rotating after reaching the first or last items in the image array
     if (imageIndex < 0) {
         imageIndex = images.length + imageIndex;
@@ -46,7 +46,7 @@ const circulatePhotoIndex = (imageIndex) => {
 
 };
 
-const advancePhotos = (direction, num) => {
+const advancePhotos = function(direction, num) {
     //Move firstDisplayedImage index forward or back
     if (direction === "back") {
         firstDisplayedImage = circulatePhotoIndex(firstDisplayedImage - (num));
@@ -56,19 +56,34 @@ const advancePhotos = (direction, num) => {
     //Large photo div
     let htmlCode = '';
     for (let i = 0; i < 3; i++) {
-        htmlCode += `<img class="lightitup" src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}_small.jpg" target="${images[circulatePhotoIndex(firstDisplayedImage + i)]}.jpg" alt="">`;
+        htmlCode += '<img class="lightitup" src="';
+        htmlCode += images[circulatePhotoIndex(firstDisplayedImage + i)];
+        htmlCode += '_small.jpg" target="';
+        htmlCode += images[circulatePhotoIndex(firstDisplayedImage + i)];
+        htmlCode += '.jpg" alt="">';
     }
     thumbsLg.innerHTML = htmlCode;
 
     //Med photo div
     htmlCode = '';
     for (let i = 0; i < 2; i++) {
-        htmlCode += `<img class="lightitup" src="${images[circulatePhotoIndex(firstDisplayedImage + i)]}_small.jpg" target="${images[circulatePhotoIndex(firstDisplayedImage + i)]}.jpg" alt="">`;
+        htmlCode += '<img class="lightitup" src="';
+        htmlCode += images[circulatePhotoIndex(firstDisplayedImage + i)];
+        htmlCode += '_small.jpg" target="';
+        htmlCode += images[circulatePhotoIndex(firstDisplayedImage + i)];
+        htmlCode += '}.jpg" alt="">';
     }
     medThumbs.innerHTML = htmlCode;
 
     //Small photo div
-    smallThumbs.innerHTML = `<img class="lightitup" src="${images[circulatePhotoIndex(firstDisplayedImage)]}_small.jpg" target="${images[circulatePhotoIndex(firstDisplayedImage)]}.jpg" alt="">`;
+    htmlCode = '';
+    htmlCode += '<img class="lightitup" src="';
+    htmlCode += images[circulatePhotoIndex(firstDisplayedImage)];
+    htmlCode += '_small.jpg" target="';
+    htmlCode += images[circulatePhotoIndex(firstDisplayedImage)];
+    htmlCode += '.jpg" alt="">';
+
+    smallThumbs.innerHTML = htmlCode;
 
     //Rebuild the lightbox for newly added items
     add_lightbox();
@@ -79,7 +94,7 @@ const advancePhotos = (direction, num) => {
 /////////////////////////////////////////////
 //Lightbox Gallary feature
 
-const add_lightbox = () => {
+const add_lightbox = function() {
     var $lightbox = $("<div class='lightbox'></div>");
     console.log($lightbox);
     var $img = $("<img>");
@@ -110,6 +125,7 @@ const add_lightbox = () => {
 /////////////////////////////////////////////
 
 $(document).ready(function() {
+
     advancePhotos();
     $('body').scrollspy({ target: '#main-nav', offset:200 });
 });

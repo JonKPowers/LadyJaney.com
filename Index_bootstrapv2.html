@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body data-spy="scroll" data-target="#main-nav" data-offset="25">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+            <a class="navbar-brand" href="#">Lady Janey</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div><!--/.navbar-collapse-->
+        </nav>
+
+        <div class="container" id="content-div">
+            <!--************ABOUT*************-->
+            <h1 id="about">About Lady</h1>
+            <div class="row">
+                <div class="col-12 text-center py-4"> <!--headshot-->
+
+                </div><!--/.col-->
+                <div class="col d-flex flex-column flex-xl-row">
+                    <div class="pr-4">
+                        <img src="img/Lady_sleeping.jpg" class="float-md-left about_pic">
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus nulla nisi, accumsan egestas quam lobortis sit amet. Praesent auctor nec nisi faucibus dignissim. Nunc rhoncus justo tellus, eget venenatis sem tincidunt ut. Nulla volutpat urna nulla, sed efficitur mauris sodales ac. Aliquam commodo metus placerat felis imperdiet pulvinar sit amet condimentum metus. Curabitur eget urna eget massa rutrum consequat. Nulla at tincidunt urna. Mauris sed ipsum tortor. Etiam commodo tellus ut tortor placerat dictum. Cras sapien augue, tempor et luctus ac, ullamcorper at lacus. Sed eu eros lorem. Praesent a neque a ipsum vestibulum semper sit amet in dolor. Vestibulum mauris libero, venenatis nec ligula at, pharetra vehicula metus. Aenean sit amet consequat orci. In ac facilisis risus, at fringilla augue. </p>
+
+                        <p class="text-justify">Duis lorem nulla, accumsan ac commodo et, luctus nec orci. Vestibulum suscipit sollicitudin interdum. Sed nec mollis lectus, et ornare dolor. Mauris id ultricies magna. Donec sagittis, orci in hendrerit fringilla, felis dui pharetra mi, eget tincidunt nunc ipsum sed dolor. Vestibulum dui enim, porta et bibendum vel, condimentum quis nunc. Mauris dapibus sagittis ex, tempus malesuada augue fringilla sed. Proin quis bibendum lacus. Maecenas tincidunt purus est, non blandit est tincidunt at. Praesent ut tempus odio. Phasellus lobortis mauris in dolor scelerisque dapibus.</p>
+                    </div>
+                    <div class="pl-4">
+                        <p class="text-justify"> Phasellus justo nibh, mattis eu facilisis sit amet, gravida non mauris. Aliquam mauris libero, egestas at nibh id, fermentum condimentum diam. Curabitur ac maximus enim. Duis mollis, est nec porttitor egestas, sapien velit suscipit arcu, quis consectetur elit nulla non erat. Vivamus maximus, nisl eu suscipit rutrum, diam est porttitor urna, vel dapibus ipsum sapien at nisi. Aliquam erat volutpat. Proin id hendrerit ex, ut feugiat orci. Aenean congue eget eros sed sodales. Phasellus sed lectus sit amet ligula iaculis vestibulum. In in sapien ac sapien dictum egestas vitae vel erat. Fusce molestie pretium elit. </p>
+
+                        <p class="text-justify"> Curabitur vitae ultricies lorem. Praesent aliquet aliquam mauris nec tincidunt. Nulla facilisis diam fermentum, interdum nisi in, porttitor est. Morbi sodales massa eu nulla ultricies porttitor. In hac habitasse platea dictumst. Cras at mattis odio, ut feugiat elit. In tortor metus, lacinia sit amet eleifend eu, ornare ultrices nulla. Aliquam elit dui, dictum in neque ut, consectetur vestibulum eros.</p>
+                    </div>
+                </div>
+            </div><!--/.row-->
+
+            <!--************GALLERY*************-->
+            <hr>
+
+            <div class="row" id="gallery">
+                <div id="thumbs_1"></div>
+                <div id="thumbs_2"></div>
+                <button class="gallery_button left_button" onclick="advancePhotos('back')">&#10094;</button>
+                <button class="gallery_button right_button" onclick="advancePhotos()">&#10095;</button>`;
+            </div><!--/.row-->
+
+            <hr>
+
+            <!--************CONTACT*************-->
+            <div class="row" id="contact">
+                <h1>Contact Lady!</h1>
+            </div> <!--/.row-->
+        </div><!--/.container #content-div-->
+
+
+        <!-- Bootstrap JS and dependencies-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <!--custom JS-->
+        <script src="js/lady.js"></script>
+    </body>
+</html>

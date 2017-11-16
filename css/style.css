@@ -285,7 +285,7 @@ Lightbox styles
 .lightbox img {
 	display: block;
 	margin: 0 auto;
-    width: initial;
+    width: auto;
 	max-width: 80%;
 }
 
