@@ -1,4 +1,4 @@
-#About LadyJaney.com
+# About LadyJaney.com
 
 This page was designed as a simple landing page for my dog, Lady, who my wife secretly wants to turn into a doggie model. It being hosted at ![LadyJaney.com](http://www.LadyJaney.com)
 
