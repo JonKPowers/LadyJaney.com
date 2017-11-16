@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body data-spy="scroll" data-target="#main-nav" data-offset="25">
+        <!--****************COLLAPSIBLE NAVBAR***************-->
         <nav class="navbar navbar-expand-md fixed-top navbar-dark">
             <a class="navbar-brand" href="#">Lady Janey</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
@@ -28,53 +29,54 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-            </div><!--/.navbar-collapse-->
+            </div>
         </nav>
 
         <div class="container" id="content-div">
             <!--************ABOUT*************-->
             <h1 id="about">About Lady the Bad Dog</h1>
             <div class="row">
-                <div class="col-12 text-center py-4"> <!--headshot-->
+                <div class="col-12 text-center py-4">
+                </div>
 
-                </div><!--/.col-->
                 <div class="col d-flex flex-column flex-lg-row">
                     <div class="pr-lg-4">
                         <img src="img/Lady_sleeping.JPG" class="float-md-left about_pic">
-                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus nulla nisi, accumsan egestas quam lobortis sit amet. Praesent auctor nec nisi faucibus dignissim. Nunc rhoncus justo tellus, eget venenatis sem tincidunt ut. Nulla volutpat urna nulla, sed efficitur mauris sodales ac. Aliquam commodo metus placerat felis imperdiet pulvinar sit amet condimentum metus. Curabitur eget urna eget massa rutrum consequat. Nulla at tincidunt urna. Mauris sed ipsum tortor. Etiam commodo tellus ut tortor placerat dictum. Cras sapien augue, tempor et luctus ac, ullamcorper at lacus. Sed eu eros lorem. Praesent a neque a ipsum vestibulum semper sit amet in dolor. Vestibulum mauris libero, venenatis nec ligula at, pharetra vehicula metus. Aenean sit amet consequat orci. In ac facilisis risus, at fringilla augue. </p>
+                        <p class="text-justify">Lady Janey (AKA "Lady") was born to a family of purebred Blue Tick Beagles in Hardin County, Kentucky. She is bred to hunt by scent, and her prey of choice are rabbits and squirrels. Lady loves nothing more than to track a scent through thick brush and employ her hunting know-how.</p>
 
-                        <p class="text-justify">Duis lorem nulla, accumsan ac commodo et, luctus nec orci. Vestibulum suscipit sollicitudin interdum. Sed nec mollis lectus, et ornare dolor. Mauris id ultricies magna. Donec sagittis, orci in hendrerit fringilla, felis dui pharetra mi, eget tincidunt nunc ipsum sed dolor. Vestibulum dui enim, porta et bibendum vel, condimentum quis nunc. Mauris dapibus sagittis ex, tempus malesuada augue fringilla sed. Proin quis bibendum lacus. Maecenas tincidunt purus est, non blandit est tincidunt at. Praesent ut tempus odio. Phasellus lobortis mauris in dolor scelerisque dapibus.</p>
+                        <p class="text-justify">Lady's start in life was inauspicious. Soon after birth, she ended up a kill shelter, but was luckily rescued by the Kentucky Humane Society. Her owners first saw her at the St. Matthews Feeders Supply on December 2, 2016, and immediately fell in love. Unfortunately, Lady was quite sick. She had kennel cough and dandruff, and had just gotten over a bout of fleas. This made her future owners even more determined to give her a good home and help her get better. Lady went home with them the next day and they've all been living happily ever since ... just kidding. </p>
                     </div>
                     <div class="pl-lg-4">
-                        <p class="text-justify"> Phasellus justo nibh, mattis eu facilisis sit amet, gravida non mauris. Aliquam mauris libero, egestas at nibh id, fermentum condimentum diam. Curabitur ac maximus enim. Duis mollis, est nec porttitor egestas, sapien velit suscipit arcu, quis consectetur elit nulla non erat. Vivamus maximus, nisl eu suscipit rutrum, diam est porttitor urna, vel dapibus ipsum sapien at nisi. Aliquam erat volutpat. Proin id hendrerit ex, ut feugiat orci. Aenean congue eget eros sed sodales. Phasellus sed lectus sit amet ligula iaculis vestibulum. In in sapien ac sapien dictum egestas vitae vel erat. Fusce molestie pretium elit. </p>
+                        <p class="text-justify">True to her Beagle self, Lady has proved to be an overly precocious and curious doglet who craves attention and treats. She especially loves going to the dog park and running furiously with other doggies. She has never met a dog or a human she didn't love at first sight. You will be her friend whether you like it or not. In her mind, Lady is pack leader of all dogs, as well as her human family. Her owners do not dispute this. This is one Beagle who knows her mind and has no qualms about expressing herself.</p>
 
-                        <p class="text-justify"> Curabitur vitae ultricies lorem. Praesent aliquet aliquam mauris nec tincidunt. Nulla facilisis diam fermentum, interdum nisi in, porttitor est. Morbi sodales massa eu nulla ultricies porttitor. In hac habitasse platea dictumst. Cras at mattis odio, ut feugiat elit. In tortor metus, lacinia sit amet eleifend eu, ornare ultrices nulla. Aliquam elit dui, dictum in neque ut, consectetur vestibulum eros.</p>
+                        <p class="text-justify"> These days, Lady's primary responsibilities include learning new commands. She has already perfected "sit," "down," and "jump," and has somehow always known how to stand upright on her hind legs. Lady also gives the best doggie kisses. She is frequently described by those who meet her as "really pretty," "lovely," and as having a "great temperament," although Lady's dad frowns upon inflating her ego too much. Nevertheless, it can't be helped. Lady is too special for words --  sociable, intelligent, and loving. In other words, the best kind of bad dog. </p>
                     </div>
                 </div>
-            </div><!--/.row-->
+            </div>
 
-            <!--************GALLERY*************-->
+            <!--************GALLERIES*************-->
+            <!--Galleries are provided for three viewport sizes and are hidden/shown using media queries-->
             <hr id="gallery">
 
             <div class="row gallery" id="gallery_large">
                 <div id="thumbs_lg"></div>
                 <button class="gallery_button left_button" onclick="advancePhotos('back', 3)">&#10094;</button>
                 <button class="gallery_button right_button" onclick="advancePhotos('forward', 3)">&#10095;</button>
-            </div><!--/.row-->
+            </div>
 
             <div class="row gallery" id="gallery_med">
                 <div id="thumbs_med">
-                </div> <!--/#thumbs_small-->
+                </div>
                 <button class="gallery_button left_button" onclick="advancePhotos('back', 2)">&#10094;</button>
                 <button class="gallery_button right_button" onclick="advancePhotos('forward', 2)">&#10095;</button>
-            </div><!--/.row #gallery_small-->
+            </div>
 
             <div class="row gallery" id="gallery_small">
                 <div id="thumbs_small">
-                </div> <!--/#thumbs_small-->
+                </div>
                 <button class="gallery_button left_button" onclick="advancePhotos('back', 1)">&#10094;</button>
                 <button class="gallery_button right_button" onclick="advancePhotos('forward', 1)">&#10095;</button>
-            </div><!--/.row #gallery_small-->
+            </div>
             <hr>
 
             <!--************CONTACT*************-->
@@ -83,26 +85,28 @@
                 <h1>Bark at Lady!</h1>
                 <h4>(she'll bark back)</h4>
             </div>
+
             <div class="py-5 clearfix" id="info">
                 <div class="float-left col-lg-6">
                     <h3>Contact Info</h3>
                     <p class="pt-3">
                         555 Bite First, Ask Later Lane, Suite 123 <br />
+                        <a href="mailto:lady@ladyjaney.com" class="link">lady@ladyjaney.com</a>
                         Louisville, Kentucky 40206<br />
                         (502) I-BAD-DOG<br />
-                        <a href="mailto:lady@ladyjaney.com" class="link">lady@ladyjaney.com</a>
                     </p>
-                </div> <!-- /.float-left-->
+                </div>
                 <div class="float-right col-lg-6 d-none d-lg-block">
                     <a href="#contact" class="button">Find out how to meet Lady</a>
                     <a href="#contact" class="button">Book Lady for a special event</a>
                     <a href="#contact" class="button">Learn more about Lady</a>
                     <a href="#contact" class="button">Need more Lady?</a>
                 </div>
-            </div> <!--/.clearfix-->
+            </div>
+
             <div id="contact-form" class="mb-5">
                 <h3>Contact form</h3>
-                <form method="post" action="/contact">
+                <form method="post" action="index.html">
                     <div class="input">
                         <input type="text" name="first_name" placeholder="First name *" />
                     </div>
@@ -116,25 +120,14 @@
                         <input type="text" name="email" placeholder="Email address *" />
                     </div>
                     <div class="input subject">
-                        <input type="text" name="subject" id="subject" placeholder="Subject *" />
+                        <input type="text" name="subject" id="subject" placeholder="Subject" />
                     </div>
                     <div class="input message">
-                        <textarea name="message" placeholder="Your question *"></textarea>
+                        <textarea name="message" placeholder="Your message"></textarea>
                     </div>
-                    <div class="ok">
-                        Sent! Thanks!
-                    </div>
-                    <div class="submitAndMessage">
-                        <button class="button">Send your message</button>
-                        <div class="errorMessage">
-                            <span class="notEmpty">All fields are required</span>
-                            <span class="email">E-mail is invalid</span>
-                        </div>
-                    </div>
+                    <button class="button">Send your message</button>
                 </form>
-            </div> <!-- /#contact-form-->
-
-             <!--/#contact-->
+            </div>
 
 
         <!--************FOOTER*************-->
